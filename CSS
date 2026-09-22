@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 28px 16px;
+  background: #ff6600;
+  color: #000;
+}
+
+header h1 {
+  font-size: 1.9rem;
+}
+
+header p {
+  margin-top: 6px;
+  opacity: 0.95;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 50px;
+}
+
+/* Form card */
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e0b8b8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(200, 30, 30, 0.12);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.field {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.field input {
+  padding: 9px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #ff6600;
+}
+
+.btn-add {
+  flex: 0 0 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  background: #ff6600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #ff6600;
+}
+
+/* Student display area (Grid)*/
+/* Desktop: 5 cards per row */
+#student-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.student-card {
+  background: #fff;
+  border: 1px solid #e0b8b8;
+  border-top: 4px solid #ff6600;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(200, 30, 30, 0.10);
+  padding: 16px;
+  text-align: center;
+}
+
+.student-card h3 {
+  font-size: 1.05rem;
+  color: #000;
+  overflow-wrap: anywhere;
+}
+
+.student-card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 4px 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.btn-remove {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #000;
+  background: #ff6600;
+  border: 1px solid #ff6600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  padding: 20px 0;
+}
+
+/*Media queries */
+/* Tablet: 3 cards per row */
+@media (max-width: 1024px) {
+  #student-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  #student-list {
+    grid-template-columns: 1fr;
+  }
+}
