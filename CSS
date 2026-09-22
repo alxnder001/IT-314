@@ -93,7 +93,9 @@ main {
 }
 
 /* Student display area (Grid)*/
+
 /* Desktop: 5 cards per row */
+
 #student-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -146,7 +148,9 @@ main {
 }
 
 /*Media queries */
+
 /* Tablet: 3 cards per row */
+
 @media (max-width: 1024px) {
   #student-list {
     grid-template-columns: repeat(3, 1fr);
@@ -154,6 +158,7 @@ main {
 }
 
 /* Mobile: 1 card per row */
+
 @media (max-width: 600px) {
   #student-list {
     grid-template-columns: 1fr;
