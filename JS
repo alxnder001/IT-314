@@ -4,13 +4,15 @@ const programInput = document.getElementById("student-program");
 const studentList = document.getElementById("student-list");
 const emptyMessage = document.getElementById("empty-message");
 
-// Show or hide the "no students" message
+// It will show or hide the "no students" message 
+
 function updateEmptyMessage() {
   const hasCards = studentList.querySelector(".student-card") !== null;
   emptyMessage.style.display = hasCards ? "none" : "block";
 }
 
-// Create a student card dynamically
+// Create a student card actively
+
 function createStudentCard(name, program) {
   const card = document.createElement("article");
   card.classList.add("student-card");
@@ -26,7 +28,8 @@ function createStudentCard(name, program) {
   removeBtn.classList.add("btn-remove");
   removeBtn.textContent = "Remove";
   
-  // Remove this card when its button is clicked
+  // This will remove the card when button is clicked
+
   removeBtn.addEventListener("click", function() {
     card.remove();
     updateEmptyMessage();
@@ -36,7 +39,8 @@ function createStudentCard(name, program) {
   return card;
 }
 
-// Handle form submission
+// This will handle a form submission
+
 form.addEventListener("submit", function(event) {
   event.preventDefault(); // stop page reload
   
